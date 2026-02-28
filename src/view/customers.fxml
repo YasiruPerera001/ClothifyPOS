@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController" prefWidth="600" prefHeight="430">
+
+    <!-- Header Label -->
+    <Label text="Customers Management"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Input fields -->
+    <Label layoutX="20" layoutY="70" text="Name"/>
+    <TextField fx:id="txtName" layoutX="100" layoutY="70" prefWidth="200"/>
+
+    <Label layoutX="20" layoutY="110" text="Phone"/>
+    <TextField fx:id="txtPhone" layoutX="100" layoutY="110" prefWidth="200"/>
+
+    <Label layoutX="20" layoutY="150" text="Email"/>
+    <TextField fx:id="txtEmail" layoutX="100" layoutY="150" prefWidth="200"/>
+
+    <!-- Buttons -->
+    <Button fx:id="btnAdd" layoutX="320" layoutY="70" text="Add" onAction="#addCustomer"/>
+    <Button fx:id="btnUpdate" layoutX="320" layoutY="110" text="Update" onAction="#updateCustomer"/>
+    <Button fx:id="btnDelete" layoutX="320" layoutY="150" text="Delete" onAction="#deleteCustomer"/>
+
+    <!-- Table -->
+    <TableView fx:id="customerTable" layoutX="20" layoutY="200" prefWidth="560" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colPhone" text="Phone" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

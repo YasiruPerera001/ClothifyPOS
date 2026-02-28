@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500" prefWidth="700"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.OrderController">
+
+    <Label text="Orders / POS System"
+           layoutX="250" layoutY="20"
+           style="-fx-font-size:20px;"/>
+
+    <!-- Select Product -->
+    <Label text="Product:" layoutX="20" layoutY="70"/>
+    <ComboBox fx:id="productCombo" layoutX="100" layoutY="70" prefWidth="200"/>
+
+    <Label text="Quantity:" layoutX="20" layoutY="110"/>
+    <TextField fx:id="qtyField" layoutX="100" layoutY="110"/>
+
+    <Button text="Add to Cart" layoutX="100" layoutY="150" onAction="#addToCart"/>
+    <Button text="Checkout" layoutX="200" layoutY="150" onAction="#checkout"/>
+
+    <!-- Table Cart -->
+    <TableView fx:id="cartTable" layoutX="20" layoutY="200" prefHeight="250" prefWidth="650">
+        <columns>
+            <TableColumn fx:id="colProdName" text="Product"/>
+            <TableColumn fx:id="colQty" text="Quantity"/>
+            <TableColumn fx:id="colPrice" text="Price"/>
+            <TableColumn fx:id="colTotal" text="Total"/>
+        </columns>
+    </TableView>
+
+    <Label text="Total:" layoutX="500" layoutY="470"/>
+    <Label fx:id="totalLabel" layoutX="550" layoutY="470" text="0.0"/>
+
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400" prefWidth="600"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController">
+
+    <children>
+
+        <Label text="Clothify POS Dashboard"
+               layoutX="180"
+               layoutY="50"
+               style="-fx-font-size:20px;" />
+
+        <Button text="Products"
+                layoutX="250"
+                layoutY="100"
+                onAction="#openProducts"/>
+
+        <Button text="Customers"
+                layoutX="250"
+                layoutY="150"
+                onAction="#openCustomers"/>
+
+        <Button text="Employees"
+                layoutX="250"
+                layoutY="200"
+                onAction="#openEmployees"/>
+
+        <Button text="Suppliers"
+                layoutX="250"
+                layoutY="250"
+                onAction="#openSuppliers"/>
+
+        <Button text="Orders"
+                layoutX="250"
+                layoutY="300"
+                onAction="#openOrders"/>
+
+        <Button fx:id="btnReports"
+                text="Reports"
+                layoutX="500"
+                layoutY="50"
+                prefWidth="120"
+                prefHeight="40"
+                onAction="#openReports"/>
+
+    </children>
+
+</AnchorPane>

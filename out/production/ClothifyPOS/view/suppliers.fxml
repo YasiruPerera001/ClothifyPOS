@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierController" prefWidth="600" prefHeight="400">
+
+    <!-- Header -->
+    <Label text="Suppliers Management"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Input fields -->
+    <Label layoutX="20" layoutY="50" text="Name"/>
+    <TextField fx:id="txtName" layoutX="100" layoutY="50" prefWidth="200"/>
+
+    <Label layoutX="20" layoutY="90" text="Phone"/>
+    <TextField fx:id="txtPhone" layoutX="100" layoutY="90" prefWidth="200"/>
+
+    <Label layoutX="20" layoutY="130" text="Address"/>
+    <TextField fx:id="txtAddress" layoutX="100" layoutY="130" prefWidth="200"/>
+
+    <!-- Buttons -->
+    <Button fx:id="btnAdd" layoutX="320" layoutY="50" text="Add" onAction="#addSupplier"/>
+    <Button fx:id="btnUpdate" layoutX="320" layoutY="90" text="Update" onAction="#updateSupplier"/>
+    <Button fx:id="btnDelete" layoutX="320" layoutY="130" text="Delete" onAction="#deleteSupplier"/>
+
+    <!-- Table -->
+    <TableView fx:id="supplierTable" layoutX="20" layoutY="180" prefWidth="560" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colPhone" text="Phone" prefWidth="150"/>
+            <TableColumn fx:id="colAddress" text="Address" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>
